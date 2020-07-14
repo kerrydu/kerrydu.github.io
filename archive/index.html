@@ -1,23 +1,523 @@
----
-layout: default
-title: Archive
----
-<!-- Original snippet for generating archive page found here:
-https://gist.github.com/tuananh/743255://gist.github.com/tuananh/7432553 -->
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>index</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 
-	<h2>Archive</h2>
-	<ul>
-	  {% for post in site.posts %}
-	    {% unless post.next %}
-	      <h3>{{ post.date | date: '%Y-%m' }}</h3>
-	    {% else %}
-	      {% capture year %}{{ post.date | date: '%Y-%m' }}{% endcapture %}
-	      {% capture nyear %}{{ post.next.date | date: '%Y-%m' }}{% endcapture %}
-	      {% if year != nyear %}
-	        <h3>{{ post.date | date: '%Y-%m' }}</h3>
-	      {% endif %}
-	    {% endunless %}
 
-	    <li><a href="{{site.url}}{{ post.url }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h2><a name="杜克锐kerry-du" class="md-header-anchor"></a><span>杜克锐(Kerry Du)</span></h2><blockquote><p><span>kerrydu AT xmu.edu.cn</span></p></blockquote><h3><a name="about-me" class="md-header-anchor"></a><span>About me</span></h3><ul><li><span>1986年6月出生于广东汕头,2015年6月于厦门大学获经济学博士学位，2019年1月起任厦门大学中国能源政策研究院副教授，主要研究领域为应用计量经济学、能源和环境经济学，效率和生产率分析；在《经济研究》、《世界经济》、《Energy Economics》等国内外重要期刊发表论文20多篇，其中两篇入选</span><em><span>ESI高引论文</span></em><span>；主持国家自然科学基金青年项目、中国博士后科学基金面上项目中国博士后科学基金特别资助项目、山东省自然科学基金博士项目等多个课题；获得山东省社会科学优秀成果二等奖（2018）。</span></li></ul><hr /><h3><a name="工作经历" class="md-header-anchor"></a><span>工作经历</span></h3><ul><li><span>2019年1月至今 ，            厦门大学管理学院，中国能源政策研究院， 副教授</span></li><li><span>2015年7月-2018年11月，山东大学经济研究院， 助理研究员</span></li></ul><hr /><h3><a name="教育经历" class="md-header-anchor"></a><span>教育经历</span></h3><ul><li><span>2012.09-2015.06， 厦门大学， 能源经济学，博士学位</span></li></ul><hr /><h3><a name="科研项目" class="md-header-anchor"></a><span>科研项目</span></h3><ul><li><span>国家自然科学基金青年项目，异质技术和空间相关下的环境效率测度方法及应用研究，71603148，17万元，2017.01-2019.12, 主持</span></li></ul><hr /><h3><a name="程序编写" class="md-header-anchor"></a><span>程序编写</span></h3><ul><li><span>reshape3: Stata  module to enhance reshape for multilevel data [ssc install reshape3]</span></li><li><span>LMDI: Stata module to compute Logarithmic Mean Divisia Index Decomposition [ssc install lmdi]</span></li><li><span>LABONE: Stata module to label variables after import excel [ssc install labone]</span></li><li><span>TRANSLOG: Stata module to create new variables for a translog function [ssc install translog]</span></li><li><a href='https://gitee.com/kerrydu/STATA-DEA/tree/master'><span>Some Stata commands on DEA models for energy and environmental efficiency evaluation</span></a></li><li><a href='http://homepage.ntu.edu.tw/~wangh/Matlab_W&amp;H_JoE(2010).zip'><span>PSFA2010: Matlab module for Estimating Fixed-Effect Panel Stochastic Frontier Models by Model Transformation</span></a></li><li><a href='https://sites.google.com/site/kerrydu2016/home/stata-files'><span>PSECTA: Stata module for econometric convergent test and club clustering</span></a></li></ul><hr /><h3><a name="论文发表" class="md-header-anchor"></a><span>论文发表</span></h3><ol start='' ><li><strong><span>Du, K.</span></strong><span>, Zhang, Y. and Zhou, Q. Estimating partially linear functional-coefficient panel data models with Stata. Stata Journal, forthcoming.</span></li><li><strong><span>Du, K.</span></strong><span>, Shao, S. and Yan, Z.  Urban residential energy demand and rebound effect in China: A stochastic energy demand frontier approach. The Energy Journal, accepted.</span></li><li><span>Zheming Yan, Baoling Zou, </span><strong><span>Kerui Du</span></strong><span> (通讯作者), Ke Li, Do renewable energy technology innovations promote China&#39;s green productivity growth? Fresh evidence from partially linear functional-coefficient models, Energy Economics, Volume 90, 2020,104842. </span></li><li><strong><span>Kerui Du</span></strong><span>, Pengzhen Li, Zheming Yan.  </span><a href='https://linkinghub.elsevier.com/retrieve/pii/S0040162518306176'><span>Do green technology innovations contribute to carbon dioxide emission reduction? Empirical Evidence from Patent Data</span></a><span>. Technological Forecasting &amp; Social Change, Volume 146, September 2019, Pages 297-303. </span></li><li><span>Caiquan Bai, </span><strong><span>Kerui Du</span></strong><span>（通讯作者), Ying Yu, Chen Feng. </span><a href='https://www.sciencedirect.com/science/article/pii/S0140988319301495'><span>Understanding the trend of total factor carbon productivity in the world: Insights from convergence analysis</span></a><span>. Energy Economics, Volume 81, June 2019, Pages 698-708</span></li><li><span>Jianglong Li, Hongxun Liu, </span><strong><span>Kerui Du</span></strong><span>（通讯作者). </span><a href='https://www.sciencedirect.com/science/article/pii/S1043951X19300574'><span>Does market-oriented reform increase energy rebound effect? Evidence from China&#39;s regional development</span></a><span>, China Economic Review, 2019，56，101304.</span></li><li><strong><span>Kerui Du</span></strong><span>, Jianglong Li.  </span><a href='https://www.sciencedirect.com/science/article/pii/S0301421519302824'><span>Towards a green world: How do green technology innovations affect total-factor carbon productivity</span></a><span>. Energy Policy, Volume 131, August 2019, Pages 240-250.</span></li><li><span>Xin Yao,  Ruting Huang,  </span><strong><span>Kerui Du</span></strong><span>.  </span><a href='https://www.sciencedirect.com/science/article/pii/S1043951X19300239'><span>The impacts of market power on power grid efficiency: Evidence from China</span></a><span>. China Economic Review，China Economic Review, Volume 55, June 2019, Pages 99-110.</span></li><li><span>Hongxun Liu, </span><strong><span>Kerui Du</span></strong><span>（通讯作者），Jianglong Li. </span><a href='https://www.sciencedirect.com/science/article/pii/S0140988319300696'><span>An improved approach to estimate direct rebound effect by incorporating energy efficiency: A revisit of China&#39;s industrial energy demand</span></a><span>. Energy Economics, Volume 80, May 2019, Pages 720-730.</span></li><li><strong><span>Kerui Du</span></strong><span>. Econometrics convergence test and club clustering using Stata. Stata Journal, 2017，Volume 17 Number 4， pp. 882-900.</span></li><li><span>Xiaoling Ouyang， Beiying Gao，</span><strong><span>Kerui Du</span></strong><span>(共同通讯作者), Gang Du. Industrial sectors&#39; energy rebound effect: An empirical study of Yangtze River Delta urban agglomeration, Energy , Volume 145, 15 February 2018, Pages 408-416.</span></li><li><span>Zhi Li, Xiaoling Ouyang, </span><strong><span>Kerui Du</span></strong><span> (共同通讯作者), Yang Zhao, Does government transparency contribute to improved eco-efficiency performance? An empirical study of 262 cities in China, Energy Policy, Volume 110, November 2017, Pages 79-89. </span></li><li><span>Zheming Yan, </span><strong><span>Kerui Du</span></strong><span>（通讯作者）, Zhiming Yang, Min Deng, Convergence or divergence? Understanding the global development trend of low-carbon technologies, Energy Policy, Volume 109, 2017, Pages 499-509.</span></li><li><span>Zheming Yan; Lan Yi; </span><strong><span>Kerui Du</span></strong><span>（通讯作者）; Zhiming Yang. Impacts of Low-Carbon Innovation and Its Heterogeneous Components on CO2 Emissions. Sustainability, 2017, 9, 548. </span></li><li><strong><span>Kerui Du</span></strong><span>; Boqiang Lin; Chunping Xie. Exploring Change in China’s carbon intensity: a decomposition approach. Sustainability, 2017, 9(2), 296.</span></li><li><strong><span>Kerui Du</span></strong><span>, Chunping Xie, Xiaoling Ouyang, A comparison of carbon dioxide (CO2) emission trends among provinces in China, Renewable and Sustainable Energy Reviews, Volume 73, June 2017, Pages 19-25.</span></li><li><strong><span>Kerui Du</span></strong><span> and Boqiang Lin. International comparison of total-factor energy productivity growth: A parametric Malmquist index approach. Energy, Volume 118, 1 January 2017, Pages 481-488.</span></li><li><strong><span>Kerui Du</span></strong><span> and Boqiang Lin. Understanding the rapid growth of China&#39;s energy consumption: A comprehensive decomposition framework. Energy, Volume 90, Part 1, October 2015, Pages 570–577.</span></li><li><strong><span>Kerui Du</span></strong><span> and Boqiang Lin. Comments on “Using latent variable approach to estimate China&#39;s economy-wide energy rebound effect over 1954-2010” by Shuai Shao, Tao Huang and Lili Yang. Energy Policy, Volume 86, November 2015, Pages 219–221.</span></li><li><strong><span>Kerui Du</span></strong><span>, Lu Huang, and Zhiming Yang. Understanding industrial energy productivity growth in China: a production-theoretical approach. Energy Efficiency, June 2015, Volume 8, Issue 3, pp 493-508.</span></li><li><span>Boqiang Lin and </span><strong><span>Kerui Du</span></strong><span>. Measuring energy rebound effect in the Chinese economy: An economic accounting approach. Energy Economics, Volume 50, July 2015, Pages 96–104.</span></li><li><span>Boqiang Lin and </span><strong><span>Kerui Du</span></strong><span>. Modeling the dynamics of carbon emission performance in China: A parametric Malmquist index approach. Energy Economics, Volume 49, May 2015, Pages 550–557.</span></li><li><span>Boqiang Lin and </span><strong><span>Kerui Du</span></strong><span>. Energy and CO2 emissions performance in China&#39;s regional economies: Do market-oriented reforms matter? Energy Policy, Volume 78, March 2015, Pages 113–124.</span></li><li><span>Boqiang Lin and </span><strong><span>Kerui Du</span></strong><span>. Measuring energy efficiency under heterogeneous technologies using a latent class stochastic frontier approach: An application to Chinese energy economy. Energy, Volume 76, 1 November 2014, Pages 884–890.</span></li><li><span>Boqiang Lin and </span><strong><span>Kerui Du</span></strong><span>. Decomposing Energy Intensity Change: A Combination of Index Decomposition Analysis and Production-theoretical Decomposition Analysis. Applied Energy, Volume 129, 15 September 2014，Pages 158-165.</span></li><li><strong><span>Kerui Du</span></strong><span>, Lu Huang and Kun Yu. Sources of the potential CO2 emissions reduction in China: A nonparametric metafrontier approach. Applied Energy, Volume 115, 15 February 2014, Pages 491–501.</span></li><li><span>Boqiang Lin and </span><strong><span>Kerui Du</span></strong><span>. Technology gap and China’s regional energy efficiency: A parametric metafrontier approach. Energy Economics, Volume 40, November 2013, Pages 529–536.</span></li><li><span>林伯强,</span><strong><span>杜克锐</span></strong><span>. 要素市场扭曲对能源效率的影响. 经济研究,2013,09:125-136.</span></li><li><span>林伯强,</span><strong><span>杜克锐</span></strong><span>. 理解中国能源强度的变化:一个综合的分解框架. 世界经济,2014,04:69-87.</span></li><li><span>林伯强,</span><strong><span>杜克锐</span></strong><span>. 我国能源生产率增长的动力何在：基于距离函数的分解. 金融研究,2013, 09,84-96.</span></li><li><strong><span>杜克锐</span></strong><span>,罗能生. 电视台集团化还是竞争:一个产业组织的视角. 世界经济文汇,2011,06:11-31. （本科毕业论文）</span></li></ol><hr /><h3><a name="期刊评审" class="md-header-anchor"></a><span>期刊评审</span></h3><p><span>Applied Economics, Annals of Tourism Research, Energy Economics, China Economic Review, Computational Economics, Economic Modelling, Energy Policy, Technological Forecasting &amp; Social Change, Applied Energy, Energy, Renewable and Sustainable Energy Reviews, Journal of Cleaner Production, Transportation Research Part A: Policy and Practice，Business, Strategy and the Environment, 国家自然科学基金（面上项目通讯评审） </span></p></div>
+</body>
+</html>

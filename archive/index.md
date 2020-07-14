@@ -2,19 +2,24 @@
 > kerrydu AT xmu.edu.cn
 
 ### About me
+
 * 1986年6月出生于广东汕头,2015年6月于厦门大学获经济学博士学位，2019年1月起任厦门大学中国能源政策研究院副教授，主要研究领域为应用计量经济学、能源和环境经济学，效率和生产率分析；在《经济研究》、《世界经济》、《Energy Economics》等国内外重要期刊发表论文20多篇，其中两篇入选*ESI高引论文*；主持国家自然科学基金青年项目、中国博士后科学基金面上项目中国博士后科学基金特别资助项目、山东省自然科学基金博士项目等多个课题；获得山东省社会科学优秀成果二等奖（2018）。
 ---
 ### 工作经历
+
 * 2019年1月至今 ，            厦门大学管理学院，中国能源政策研究院， 副教授
 * 2015年7月-2018年11月，山东大学经济研究院， 助理研究员
 ---
 ### 教育经历
+
 * 2012.09-2015.06， 厦门大学， 能源经济学，博士学位
 ---
 ### 科研项目
+
 * 国家自然科学基金青年项目，异质技术和空间相关下的环境效率测度方法及应用研究，71603148，17万元，2017.01-2019.12, 主持
 ---
 ### 程序编写
+
 * reshape3: Stata  module to enhance reshape for multilevel data [ssc install reshape3]
 *  LMDI: Stata module to compute Logarithmic Mean Divisia Index Decomposition [ssc install lmdi]
 * LABONE: Stata module to label variables after import excel [ssc install labone]
@@ -25,6 +30,7 @@
 ---
 
 ### 论文发表
+
 1. **Du, K.**, Zhang, Y. and Zhou, Q. Estimating partially linear functional-coefficient panel data models with Stata. Stata Journal, forthcoming.
 2. **Du, K.**, Shao, S. and Yan, Z.  Urban residential energy demand and rebound effect in China: A stochastic energy demand frontier approach. The Energy Journal, accepted.
 3. Zheming Yan, Baoling Zou, **Kerui Du** (通讯作者), Ke Li, Do renewable energy technology innovations promote China's green productivity growth? Fresh evidence from partially linear functional-coefficient models, Energy Economics, Volume 90, 2020,104842. 
@@ -59,4 +65,5 @@
 
 ---
 ### 期刊评审
+
 Applied Economics, Annals of Tourism Research, Energy Economics, China Economic Review, Computational Economics, Economic Modelling, Energy Policy, Technological Forecasting & Social Change, Applied Energy, Energy, Renewable and Sustainable Energy Reviews, Journal of Cleaner Production, Transportation Research Part A: Policy and Practice，Business, Strategy and the Environment, 国家自然科学基金（面上项目通讯评审） 
