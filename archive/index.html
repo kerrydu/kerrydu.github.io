@@ -2,14 +2,16 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>杜克锐个人简历</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -65,7 +67,7 @@ div.hr:focus { cursor: none; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
 .md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
@@ -77,6 +79,7 @@ div.hr:focus { cursor: none; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
 li { margin: 0px; position: relative; }
 blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
@@ -86,10 +89,10 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
-  html.blink-to-pdf { font-size: 13px; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -100,6 +103,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
 [contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
@@ -130,18 +134,9 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
 kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
 code { text-align: left; vertical-align: initial; }
 a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none 0s ease 0s; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
@@ -150,13 +145,60 @@ table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
-svg[id^="mermaidChart"] { line-height: 1em; }
 mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
 @media print {
   .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
 
 
 :root {
@@ -172,10 +214,11 @@ mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
     /* open-sans-700italic - latin-ext_latin */
   html {
     font-size: 16px;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
     color: rgb(51, 51, 51);
     line-height: 1.6;
 }
@@ -344,7 +387,7 @@ table {
     word-break: initial;
 }
 table tr {
-    border-top: 1px solid #dfe2e5;
+    border: 1px solid #dfe2e5;
     margin: 0;
     padding: 0;
 }
@@ -352,24 +395,24 @@ table tr:nth-child(2n),
 thead {
     background-color: #f8f8f8;
 }
-table tr th {
+table th {
     font-weight: bold;
     border: 1px solid #dfe2e5;
     border-bottom: 0;
     margin: 0;
     padding: 6px 13px;
 }
-table tr td {
+table td {
     border: 1px solid #dfe2e5;
     margin: 0;
     padding: 6px 13px;
 }
-table tr th:first-child,
-table tr td:first-child {
+table th:first-child,
+table td:first-child {
     margin-top: 0;
 }
-table tr th:last-child,
-table tr td:last-child {
+table th:last-child,
+table td:last-child {
     margin-bottom: 0;
 }
 
@@ -518,9 +561,9 @@ header, .context-menu, .megamenu-content, footer{
     color: #b4654d;
 }
 
-.html-for-mac .context-menu {
+/*.html-for-mac {
     --item-hover-bg-color: #E6F0FE;
-}
+}*/
 
 #md-notification .btn {
     border: 0;
@@ -528,6 +571,7 @@ header, .context-menu, .megamenu-content, footer{
 
 .dropdown-menu .divider {
     border-color: #e5e5e5;
+    opacity: 0.4;
 }
 
 .ty-preferences .window-content {
@@ -539,10 +583,16 @@ header, .context-menu, .megamenu-content, footer{
     background: #999;
 }
 
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
 
-</style>
+
+
+</style><title>杜克锐个人简历</title>
 </head>
-<body class='typora-export os-windows'>
-<div id='write'  class=''><h2><a name="杜克锐kerry-du" class="md-header-anchor"></a><span>杜克锐(Kerry Du)</span></h2><blockquote><p><span>kerrydu AT xmu.edu.cn</span></p></blockquote><h3><a name="about-me" class="md-header-anchor"></a><span>About me</span></h3><ul><li><p><span>1986年6月出生于广东汕头,2015年6月于厦门大学获经济学博士学位，2019年1月起任厦门大学中国能源政策研究院副教授，主要研究领域为应用计量经济学、能源和环境经济学，效率和生产率分析；在《经济研究》、《世界经济》、《Energy Economics》、《Energy Journal》、《China Economic Review》、《Stata Journal》等国内外重要期刊发表论文30多篇；主持国家自然科学基金青年项目、中国博士后科学基金面上项目、中国博士后科学基金特别资助项目、山东省自然科学基金博士项目等多个课题；获得山东省社会科学优秀成果二等奖（2018）。</span></p><p><span>See my profile at </span><a href='https://scholar.google.com/citations?hl=zh-CN&amp;user=hHQkDmUAAAAJ'><span>Google Scholar</span></a></p></li></ul><hr /><h3><a name="工作经历" class="md-header-anchor"></a><span>工作经历</span></h3><ul><li><span>2019年1月至今 ，            厦门大学管理学院，中国能源政策研究院， 副教授</span></li><li><span>2015年7月-2018年11月，山东大学经济研究院， 助理研究员</span></li></ul><hr /><h3><a name="教育经历" class="md-header-anchor"></a><span>教育经历</span></h3><ul><li><span>2012.09-2015.06， 厦门大学， 能源经济学，博士学位</span></li></ul><hr /><h3><a name="科研项目" class="md-header-anchor"></a><span>科研项目</span></h3><ul><li><span>国家自然科学基金面上项目，环境规制与中国城市经济绿色转型：基于绿色技术进步和产业结构升级视角 的研究，72074184，48万元，2021.01-2024.12, 主持</span></li><li><span>国家自然科学基金青年项目，异质技术和空间相关下的环境效率测度方法及应用研究，71603148，17万元，2017.01-2019.12, 主持</span></li></ul><hr /><h3><a name="程序编写" class="md-header-anchor"></a><span>程序编写</span></h3><ul><li><a href='https://gitee.com/kerrydu/gitee'><span>gitee: Install Stata package in Gitee</span></a></li><li><a href='https://gitee.com/kerrydu/gitee/tree/master/installpkg'><span>installpkg: Stata Window Menu for installing package</span></a></li><li><span>xtplfc: Stata  module to estimate partially linear functional-coefficient panel data models </span><a href='https://github.com/kerrydu/xtplfc_Stata'><span>[github]</span></a><span> </span><a href='https://gitee.com/kerrydu/xtplfc_Stata'><span>[gitee]</span></a></li><li><span>mepi: Malmquist Energy Productivity Index in Stata </span><a href='https://github.com/kerrydu/mepi'><span>[github]</span></a><span> </span><a href='https://gitee.com/kerrydu/mepi'><span>[gitee]</span></a></li><li><span>gftpch: Total Factor Productivity with Undesirable Outputs in Stata </span><a href='https://github.com/kerrydu/gtfpch'><span>[github]</span></a><span> </span><a href='https://gitee.com/kerrydu/gtfpch'><span>[gitee]</span></a></li><li><span>malmq2: Malmquist Productivity index in Stata </span><a href='https://github.com/kerrydu/malmq2'><span>[github]</span></a><span> </span><a href='https://gitee.com/kerrydu/malmq2'><span>[gitee]</span></a></li><li><span>sbmeff: Slacks-based Measure of Efficiency in Stata </span><a href='https://github.com/kerrydu/sbmeff'><span>[github]</span></a><span> </span><a href='https://gitee.com/kerrydu/sbmeff'><span>[gitee]</span></a></li><li><span>ddfeff: Directional Distance Function for Efficiency/Productivity Analysis in Stata </span><a href='https://github.com/kerrydu/ddfeff'><span>[github]</span></a><span> </span><a href='https://gitee.com/kerrydu/ddfeff'><span>[gitee]</span></a></li><li><span>reshape3: Stata  module to enhance reshape for multilevel data [ssc install reshape3]</span></li><li><span>LMDI: Stata module to compute Logarithmic Mean Divisia Index Decomposition [ssc install lmdi]</span></li><li><span>LABONE: Stata module to label variables after import excel [ssc install labone]</span></li><li><span>TRANSLOG: Stata module to create new variables for a translog function [ssc install translog]</span></li><li><a href='https://gitee.com/kerrydu/STATA-DEA/tree/master'><span>Some Stata commands on DEA models for energy and environmental efficiency evaluation</span></a></li><li><a href='http://homepage.ntu.edu.tw/~wangh/Matlab_W&amp;H_JoE(2010).zip'><span>PSFA2010: Matlab module for Estimating Fixed-Effect Panel Stochastic Frontier Models by Model Transformation</span></a></li><li><a href='https://sites.google.com/site/kerrydu2016/home/stata-files'><span>PSECTA: Stata module for econometric convergent test and club clustering</span></a><span> [findit psecta]</span></li></ul><hr /><h3><a name="论文发表" class="md-header-anchor"></a><span>论文发表</span></h3><p><sup><span>#</span></sup><span> indicates the </span><strong><span>corrresponding author</span></strong><span>.</span></p><ol start='' ><li><strong><span>Du, K.</span></strong><span>,  Yu Ying,  Li Jing</span><sup><span>#</span></sup><span>.  Does international trade promote CO2 emission performance? An empirical analysis based on a partially linear functional-coefficient panel data model. Energy Economics, </span><a href='https://www.sciencedirect.com/science/journal/01409883/92/supp/C'><span>Volume 92</span></a><span>, October 2020, </span><a href='https://www.sciencedirect.com/science/article/pii/S0140988320303236'><span>104983</span></a><span>.</span></li><li><strong><span>Du, K.</span></strong><span>, Yu, Y. and Wei, C</span><sup><span>#</span></sup><span> . Climatic impact on china s residential electricity consumption Does the level of income matter？China Economic Review, 2020,63, </span><a href='https://doi.org/10.1016/j.chieco.2020.101520'><span>101520</span></a><span>. </span></li><li><strong><span>Du, K.</span></strong><span>, Zhang, Y.</span><sup><span>#</span></sup><span>  and Zhou, Q. </span><a href='https://github.com/kerrydu/xtplfc_Stata/blob/master/manuscript.pdf'><span>Estimating partially linear functional-coefficient panel data models with Stata</span></a><span>. Stata Journal, forthcoming.</span></li><li><strong><span>Du, K.</span></strong><span>, Shao, S.</span><sup><span>#</span></sup><span> and Yan, Z.  Urban residential energy demand and rebound effect in China: A stochastic energy demand frontier approach. The Energy Journal, </span><a href='http://www.iaee.org/energyjournal/article/3707'><span>online</span></a><span>.</span></li><li><span>Zheming Yan, Baoling Zou, </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>, Ke Li, Do renewable energy technology innovations promote China&#39;s green productivity growth? Fresh evidence from partially linear functional-coefficient models, Energy Economics, 2020,  90, </span><a href='https://www.sciencedirect.com/science/article/pii/S0140988320301821'><span>104842</span></a><span>. </span></li><li><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>, Pengzhen Li, Zheming Yan</span><sup><span>#</span></sup><span>.  </span><a href='https://linkinghub.elsevier.com/retrieve/pii/S0040162518306176'><span>Do green technology innovations contribute to carbon dioxide emission reduction? Empirical Evidence from Patent Data</span></a><span>. Technological Forecasting &amp; Social Change, Volume 146, September 2019, Pages 297-303. </span></li><li><span>Caiquan Bai, </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>, Ying Yu, Chen Feng. </span><a href='https://www.sciencedirect.com/science/article/pii/S0140988319301495'><span>Understanding the trend of total factor carbon productivity in the world: Insights from convergence analysis</span></a><span>. Energy Economics, Volume 81, June 2019, Pages 698-708</span></li><li><span>Jianglong Li, Hongxun Liu, </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>. </span><a href='https://www.sciencedirect.com/science/article/pii/S1043951X19300574'><span>Does market-oriented reform increase energy rebound effect? Evidence from China&#39;s regional development</span></a><span>, China Economic Review, 2019，56，101304.</span></li><li><strong><span>Kerui Du</span></strong><span>, Jianglong Li</span><sup><span>#</span></sup><span>.  </span><a href='https://www.sciencedirect.com/science/article/pii/S0301421519302824'><span>Towards a green world: How do green technology innovations affect total-factor carbon productivity</span></a><span>. Energy Policy, Volume 131, August 2019, Pages 240-250.</span></li><li><span>Xin Yao</span><sup><span>#</span></sup><span>,  Ruting Huang,  </span><strong><span>Kerui Du</span></strong><span>.  </span><a href='https://www.sciencedirect.com/science/article/pii/S1043951X19300239'><span>The impacts of market power on power grid efficiency: Evidence from China</span></a><span>. China Economic Review，China Economic Review, Volume 55, June 2019, Pages 99-110.</span></li><li><span>Hongxun Liu, </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>，Jianglong Li. </span><a href='https://www.sciencedirect.com/science/article/pii/S0140988319300696'><span>An improved approach to estimate direct rebound effect by incorporating energy efficiency: A revisit of China&#39;s industrial energy demand</span></a><span>. Energy Economics, Volume 80, May 2019, Pages 720-730.</span></li><li><strong><span>Kerui Du</span></strong><span>. Econometrics convergence test and club clustering using Stata. Stata Journal, 2017，Volume 17 Number 4， pp. 882-900.</span></li><li><span>Xiaoling Ouyang， Beiying Gao，</span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span> ，Gang Du</span><sup><span>#</span></sup><span>. Industrial sectors&#39; energy rebound effect: An empirical study of Yangtze River Delta urban agglomeration, Energy , Volume 145, 15 February 2018, Pages 408-416.</span></li><li><span>Zhi Li, Xiaoling Ouyang</span><sup><span>#</span></sup><span>, </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>, Yang Zhao, Does government transparency contribute to improved eco-efficiency performance? An empirical study of 262 cities in China, Energy Policy, Volume 110, November 2017, Pages 79-89. </span></li><li><span>Zheming Yan, </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>, Zhiming Yang, Min Deng, Convergence or divergence? Understanding the global development trend of low-carbon technologies, Energy Policy, Volume 109, 2017, Pages 499-509.</span></li><li><span>Zheming Yan; Lan Yi; </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>; Zhiming Yang. Impacts of Low-Carbon Innovation and Its Heterogeneous Components on CO2 Emissions. Sustainability, 2017, 9, 548. </span></li><li><strong><span>Kerui Du</span></strong><span>; Boqiang Lin</span><sup><span>#</span></sup><span>; Chunping Xie. Exploring Change in China’s carbon intensity: a decomposition approach. Sustainability, 2017, 9(2), 296.</span></li><li><strong><span>Kerui Du</span></strong><span>, Chunping Xie</span><sup><span>#</span></sup><span>, Xiaoling Ouyang</span><sup><span>#</span></sup><span>, A comparison of carbon dioxide (CO2) emission trends among provinces in China, Renewable and Sustainable Energy Reviews, Volume 73, June 2017, Pages 19-25.</span></li><li><strong><span>Kerui Du</span></strong><span> and Boqiang Lin</span><sup><span>#</span></sup><span>. International comparison of total-factor energy productivity growth: A parametric Malmquist index approach. Energy, Volume 118, 1 January 2017, Pages 481-488.</span></li><li><strong><span>Kerui Du</span></strong><span> and Boqiang Lin</span><sup><span>#</span></sup><span>. Understanding the rapid growth of China&#39;s energy consumption: A comprehensive decomposition framework. Energy, Volume 90, Part 1, October 2015, Pages 570–577.</span></li><li><strong><span>Kerui Du</span></strong><span> and Boqiang Lin</span><sup><span>#</span></sup><span>. Comments on “Using latent variable approach to estimate China&#39;s economy-wide energy rebound effect over 1954-2010” by Shuai Shao, Tao Huang and Lili Yang. Energy Policy, Volume 86, November 2015, Pages 219–221.</span></li><li><strong><span>Kerui Du</span></strong><span> </span><sup><span>#</span></sup><span>, Lu Huang, and Zhiming Yang. Understanding industrial energy productivity growth in China: a production-theoretical approach. Energy Efficiency, June 2015, Volume 8, Issue 3, pp 493-508.</span></li><li><span>Boqiang Lin</span><sup><span>#</span></sup><span> and </span><strong><span>Kerui Du</span></strong><span>. Measuring energy rebound effect in the Chinese economy: An economic accounting approach. Energy Economics, Volume 50, July 2015, Pages 96–104.</span></li><li><span>Boqiang Lin</span><sup><span>#</span></sup><span> and </span><strong><span>Kerui Du</span></strong><span>. Modeling the dynamics of carbon emission performance in China: A parametric Malmquist index approach. Energy Economics, Volume 49, May 2015, Pages 550–557.</span></li><li><span>Boqiang Lin</span><sup><span>#</span></sup><span> and </span><strong><span>Kerui Du</span></strong><span>. Energy and CO2 emissions performance in China&#39;s regional economies: Do market-oriented reforms matter? Energy Policy, Volume 78, March 2015, Pages 113–124.</span></li><li><span>Boqiang Lin</span><sup><span>#</span></sup><span> and </span><strong><span>Kerui Du</span></strong><span>. Measuring energy efficiency under heterogeneous technologies using a latent class stochastic frontier approach: An application to Chinese energy economy. Energy, Volume 76, 1 November 2014, Pages 884–890.</span></li><li><span>Boqiang Lin</span><sup><span>#</span></sup><span> and </span><strong><span>Kerui Du</span></strong><span>. Decomposing Energy Intensity Change: A Combination of Index Decomposition Analysis and Production-theoretical Decomposition Analysis. Applied Energy, Volume 129, 15 September 2014，Pages 158-165.</span></li><li><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>, Lu Huang and Kun Yu. Sources of the potential CO2 emissions reduction in China: A nonparametric metafrontier approach. Applied Energy, Volume 115, 15 February 2014, Pages 491–501.</span></li><li><span>Boqiang Lin</span><sup><span>#</span></sup><span> and </span><strong><span>Kerui Du</span></strong><span>. Technology gap and China’s regional energy efficiency: A parametric metafrontier approach. Energy Economics, Volume 40, November 2013, Pages 529–536.</span></li><li><span>林伯强,</span><strong><span>杜克锐</span></strong><span>. 要素市场扭曲对能源效率的影响. 经济研究,2013,09:125-136.</span></li><li><span>林伯强,</span><strong><span>杜克锐</span></strong><span>. 理解中国能源强度的变化:一个综合的分解框架. 世界经济,2014,04:69-87.</span></li><li><span>林伯强,</span><strong><span>杜克锐</span></strong><span>. 我国能源生产率增长的动力何在：基于距离函数的分解. 金融研究,2013, 09,84-96.</span></li><li><strong><span>杜克锐</span></strong><span>,罗能生. 电视台集团化还是竞争:一个产业组织的视角. 世界经济文汇,2011,06:11-31. （本科毕业论文）</span></li></ol><p>&nbsp;</p><hr /><h3><a name="期刊评审" class="md-header-anchor"></a><span>期刊评审</span></h3><p><span>Applied Economics, Annals of Tourism Research, Energy Journal, Energy Economics, China Economic Review, World Development, Computational Economics, Economic Modelling, Energy Policy, Technological Forecasting &amp; Social Change, Applied Energy, Energy, Renewable and Sustainable Energy Reviews, Transportation Research Part A: Policy and Practice，Business, Strategy and the Environment </span></p></div>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h2 id='杜克锐kerry-du'><span>杜克锐(Kerry Du)</span></h2><blockquote><p><span>kerrydu AT xmu.edu.cn</span></p></blockquote><h3 id='about-me'><span>About me</span></h3><ul><li><p><span>1986年6月出生于广东汕头,2015年6月于厦门大学获经济学博士学位，2019年1月起任厦门大学中国能源政策研究院副教授，主要研究领域为应用计量经济学、能源和环境经济学，效率和生产率分析；在《经济研究》、《世界经济》、《Energy Economics》、《Energy Journal》、《China Economic Review》、《Stata Journal》等国内外重要期刊发表论文30多篇；主持国家自然科学基金青年项目、中国博士后科学基金面上项目、中国博士后科学基金特别资助项目、山东省自然科学基金博士项目等多个课题；获得山东省社会科学优秀成果二等奖（2018）。</span></p><p><span>See my profile at </span><a href='https://scholar.google.com/citations?hl=zh-CN&amp;user=hHQkDmUAAAAJ'><span>Google Scholar</span></a></p></li></ul><hr /><h3 id='工作经历'><span>工作经历</span></h3><ul><li><span>2019年1月至今 ，            厦门大学管理学院，中国能源政策研究院， 副教授</span></li><li><span>2015年7月-2018年11月，山东大学经济研究院， 助理研究员</span></li></ul><hr /><h3 id='教育经历'><span>教育经历</span></h3><ul><li><span>2012.09-2015.06， 厦门大学， 能源经济学，博士学位</span></li></ul><hr /><h3 id='科研项目'><span>科研项目</span></h3><ul><li><span>国家自然科学基金面上项目，环境规制与中国城市经济绿色转型：基于绿色技术进步和产业结构升级视角 的研究，72074184，48万元，2021.01-2024.12, 主持</span></li><li><span>国家自然科学基金青年项目，异质技术和空间相关下的环境效率测度方法及应用研究，71603148，17万元，2017.01-2019.12, 主持</span></li></ul><hr /><h3 id='程序编写'><span>程序编写</span></h3><ul><li><a href='https://gitee.com/kerrydu/gitee'><span>gitee: Install Stata package in Gitee</span></a></li><li><a href='https://gitee.com/kerrydu/gitee/tree/master/installpkg'><span>installpkg: Stata Window Menu for installing package</span></a></li><li><span>xtplfc: Stata  module to estimate partially linear functional-coefficient panel data models </span><a href='https://github.com/kerrydu/xtplfc_Stata'><span>[github]</span></a><span> </span><a href='https://gitee.com/kerrydu/xtplfc_Stata'><span>[gitee]</span></a></li><li><span>mepi: Malmquist Energy Productivity Index in Stata </span><a href='https://github.com/kerrydu/mepi'><span>[github]</span></a><span> </span><a href='https://gitee.com/kerrydu/mepi'><span>[gitee]</span></a></li><li><span>gftpch: Total Factor Productivity with Undesirable Outputs in Stata </span><a href='https://github.com/kerrydu/gtfpch'><span>[github]</span></a><span> </span><a href='https://gitee.com/kerrydu/gtfpch'><span>[gitee]</span></a></li><li><span>malmq2: Malmquist Productivity index in Stata </span><a href='https://github.com/kerrydu/malmq2'><span>[github]</span></a><span> </span><a href='https://gitee.com/kerrydu/malmq2'><span>[gitee]</span></a></li><li><span>sbmeff: Slacks-based Measure of Efficiency in Stata </span><a href='https://github.com/kerrydu/sbmeff'><span>[github]</span></a><span> </span><a href='https://gitee.com/kerrydu/sbmeff'><span>[gitee]</span></a></li><li><span>ddfeff: Directional Distance Function for Efficiency/Productivity Analysis in Stata </span><a href='https://github.com/kerrydu/ddfeff'><span>[github]</span></a><span> </span><a href='https://gitee.com/kerrydu/ddfeff'><span>[gitee]</span></a></li><li><span>reshape3: Stata  module to enhance reshape for multilevel data [ssc install reshape3]</span></li><li><span>LMDI: Stata module to compute Logarithmic Mean Divisia Index Decomposition [ssc install lmdi]</span></li><li><span>LABONE: Stata module to label variables after import excel [ssc install labone]</span></li><li><span>TRANSLOG: Stata module to create new variables for a translog function [ssc install translog]</span></li><li><a href='https://gitee.com/kerrydu/STATA-DEA/tree/master'><span>Some Stata commands on DEA models for energy and environmental efficiency evaluation</span></a></li><li><a href='http://homepage.ntu.edu.tw/~wangh/Matlab_W&amp;H_JoE(2010).zip'><span>PSFA2010: Matlab module for Estimating Fixed-Effect Panel Stochastic Frontier Models by Model Transformation</span></a></li><li><a href='https://sites.google.com/site/kerrydu2016/home/stata-files'><span>PSECTA: Stata module for econometric convergent test and club clustering</span></a><span> [findit psecta]</span></li></ul><hr /><h3 id='论文发表'><span>论文发表</span></h3><p><sup><span>#</span></sup><span> indicates the </span><strong><span>corrresponding author</span></strong><span>.</span></p><ol start='' ><li><span>Daoping Wang, </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>, Ning Zhang.  Measuring technical efficiency and total factor productivity change with undesirable outputs in Stata. Stata Journal, forthcoming.</span></li><li><strong><span>Kerui Du</span></strong><span>; Yuanyuan Chen; Xin Yao. Environmental regulation, green technology innovation, and industrial structure upgrading: The road to the green transformation of Chinese cities. Energy Economics. 2021.(98):105247</span></li><li><strong><span>Du, K.</span></strong><span>,  Yu Ying,  Li Jing</span><sup><span>#</span></sup><span>.  Does international trade promote CO2 emission performance? An empirical analysis based on a partially linear functional-coefficient panel data model. Energy Economics, </span><a href='https://www.sciencedirect.com/science/journal/01409883/92/supp/C'><span>Volume 92</span></a><span>, October 2020, </span><a href='https://www.sciencedirect.com/science/article/pii/S0140988320303236'><span>104983</span></a><span>.</span></li><li><strong><span>Du, K.</span></strong><span>, Yu, Y. and Wei, C</span><sup><span>#</span></sup><span> . Climatic impact on china s residential electricity consumption Does the level of income matter？China Economic Review, 2020,63, </span><a href='https://doi.org/10.1016/j.chieco.2020.101520'><span>101520</span></a><span>. </span></li><li><strong><span>Du, K.</span></strong><span>, Zhang, Y.</span><sup><span>#</span></sup><span>  and Zhou, Q. </span><a href='https://github.com/kerrydu/xtplfc_Stata/blob/master/manuscript.pdf'><span>Estimating partially linear functional-coefficient panel data models with Stata</span></a><span>. Stata Journal, 2021,20(4):976-998. </span></li><li><strong><span>Du, K.</span></strong><span>, Shao, S.</span><sup><span>#</span></sup><span> and Yan, Z.  Urban residential energy demand and rebound effect in China: A stochastic energy demand frontier approach. The Energy Journal. 2021.42(4):175-193.</span></li><li><span>Zheming Yan, Baoling Zou, </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>, Ke Li, Do renewable energy technology innovations promote China&#39;s green productivity growth? Fresh evidence from partially linear functional-coefficient models, Energy Economics, 2020,  90, </span><a href='https://www.sciencedirect.com/science/article/pii/S0140988320301821'><span>104842</span></a><span>. </span></li><li><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>, Pengzhen Li, Zheming Yan</span><sup><span>#</span></sup><span>.  </span><a href='https://linkinghub.elsevier.com/retrieve/pii/S0040162518306176'><span>Do green technology innovations contribute to carbon dioxide emission reduction? Empirical Evidence from Patent Data</span></a><span>. Technological Forecasting &amp; Social Change, Volume 146, September 2019, Pages 297-303. </span></li><li><span>Caiquan Bai, </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>, Ying Yu, Chen Feng. </span><a href='https://www.sciencedirect.com/science/article/pii/S0140988319301495'><span>Understanding the trend of total factor carbon productivity in the world: Insights from convergence analysis</span></a><span>. Energy Economics, Volume 81, June 2019, Pages 698-708</span></li><li><span>Jianglong Li, Hongxun Liu, </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>. </span><a href='https://www.sciencedirect.com/science/article/pii/S1043951X19300574'><span>Does market-oriented reform increase energy rebound effect? Evidence from China&#39;s regional development</span></a><span>, China Economic Review, 2019，56，101304.</span></li><li><strong><span>Kerui Du</span></strong><span>, Jianglong Li</span><sup><span>#</span></sup><span>.  </span><a href='https://www.sciencedirect.com/science/article/pii/S0301421519302824'><span>Towards a green world: How do green technology innovations affect total-factor carbon productivity</span></a><span>. Energy Policy, Volume 131, August 2019, Pages 240-250.</span></li><li><span>Xin Yao</span><sup><span>#</span></sup><span>,  Ruting Huang,  </span><strong><span>Kerui Du</span></strong><span>.  </span><a href='https://www.sciencedirect.com/science/article/pii/S1043951X19300239'><span>The impacts of market power on power grid efficiency: Evidence from China</span></a><span>. China Economic Review，China Economic Review, Volume 55, June 2019, Pages 99-110.</span></li><li><span>Hongxun Liu, </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>，Jianglong Li. </span><a href='https://www.sciencedirect.com/science/article/pii/S0140988319300696'><span>An improved approach to estimate direct rebound effect by incorporating energy efficiency: A revisit of China&#39;s industrial energy demand</span></a><span>. Energy Economics, Volume 80, May 2019, Pages 720-730.</span></li><li><strong><span>Kerui Du</span></strong><span>. Econometrics convergence test and club clustering using Stata. Stata Journal, 2017，Volume 17 Number 4， pp. 882-900.</span></li><li><span>Xiaoling Ouyang， Beiying Gao，</span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span> ，Gang Du</span><sup><span>#</span></sup><span>. Industrial sectors&#39; energy rebound effect: An empirical study of Yangtze River Delta urban agglomeration, Energy , Volume 145, 15 February 2018, Pages 408-416.</span></li><li><span>Zhi Li, Xiaoling Ouyang</span><sup><span>#</span></sup><span>, </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>, Yang Zhao, Does government transparency contribute to improved eco-efficiency performance? An empirical study of 262 cities in China, Energy Policy, Volume 110, November 2017, Pages 79-89. </span></li><li><span>Zheming Yan, </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>, Zhiming Yang, Min Deng, Convergence or divergence? Understanding the global development trend of low-carbon technologies, Energy Policy, Volume 109, 2017, Pages 499-509.</span></li><li><span>Zheming Yan; Lan Yi; </span><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>; Zhiming Yang. Impacts of Low-Carbon Innovation and Its Heterogeneous Components on CO2 Emissions. Sustainability, 2017, 9, 548. </span></li><li><strong><span>Kerui Du</span></strong><span>; Boqiang Lin</span><sup><span>#</span></sup><span>; Chunping Xie. Exploring Change in China’s carbon intensity: a decomposition approach. Sustainability, 2017, 9(2), 296.</span></li><li><strong><span>Kerui Du</span></strong><span>, Chunping Xie</span><sup><span>#</span></sup><span>, Xiaoling Ouyang</span><sup><span>#</span></sup><span>, A comparison of carbon dioxide (CO2) emission trends among provinces in China, Renewable and Sustainable Energy Reviews, Volume 73, June 2017, Pages 19-25.</span></li><li><strong><span>Kerui Du</span></strong><span> and Boqiang Lin</span><sup><span>#</span></sup><span>. International comparison of total-factor energy productivity growth: A parametric Malmquist index approach. Energy, Volume 118, 1 January 2017, Pages 481-488.</span></li><li><strong><span>Kerui Du</span></strong><span> and Boqiang Lin</span><sup><span>#</span></sup><span>. Understanding the rapid growth of China&#39;s energy consumption: A comprehensive decomposition framework. Energy, Volume 90, Part 1, October 2015, Pages 570–577.</span></li><li><strong><span>Kerui Du</span></strong><span> and Boqiang Lin</span><sup><span>#</span></sup><span>. Comments on “Using latent variable approach to estimate China&#39;s economy-wide energy rebound effect over 1954-2010” by Shuai Shao, Tao Huang and Lili Yang. Energy Policy, Volume 86, November 2015, Pages 219–221.</span></li><li><strong><span>Kerui Du</span></strong><span> </span><sup><span>#</span></sup><span>, Lu Huang, and Zhiming Yang. Understanding industrial energy productivity growth in China: a production-theoretical approach. Energy Efficiency, June 2015, Volume 8, Issue 3, pp 493-508.</span></li><li><span>Boqiang Lin</span><sup><span>#</span></sup><span> and </span><strong><span>Kerui Du</span></strong><span>. Measuring energy rebound effect in the Chinese economy: An economic accounting approach. Energy Economics, Volume 50, July 2015, Pages 96–104.</span></li><li><span>Boqiang Lin</span><sup><span>#</span></sup><span> and </span><strong><span>Kerui Du</span></strong><span>. Modeling the dynamics of carbon emission performance in China: A parametric Malmquist index approach. Energy Economics, Volume 49, May 2015, Pages 550–557.</span></li><li><span>Boqiang Lin</span><sup><span>#</span></sup><span> and </span><strong><span>Kerui Du</span></strong><span>. Energy and CO2 emissions performance in China&#39;s regional economies: Do market-oriented reforms matter? Energy Policy, Volume 78, March 2015, Pages 113–124.</span></li><li><span>Boqiang Lin</span><sup><span>#</span></sup><span> and </span><strong><span>Kerui Du</span></strong><span>. Measuring energy efficiency under heterogeneous technologies using a latent class stochastic frontier approach: An application to Chinese energy economy. Energy, Volume 76, 1 November 2014, Pages 884–890.</span></li><li><span>Boqiang Lin</span><sup><span>#</span></sup><span> and </span><strong><span>Kerui Du</span></strong><span>. Decomposing Energy Intensity Change: A Combination of Index Decomposition Analysis and Production-theoretical Decomposition Analysis. Applied Energy, Volume 129, 15 September 2014，Pages 158-165.</span></li><li><strong><span>Kerui Du</span></strong><sup><span>#</span></sup><span>, Lu Huang and Kun Yu. Sources of the potential CO2 emissions reduction in China: A nonparametric metafrontier approach. Applied Energy, Volume 115, 15 February 2014, Pages 491–501.</span></li><li><span>Boqiang Lin</span><sup><span>#</span></sup><span> and </span><strong><span>Kerui Du</span></strong><span>. Technology gap and China’s regional energy efficiency: A parametric metafrontier approach. Energy Economics, Volume 40, November 2013, Pages 529–536.</span></li><li><span>林伯强,</span><strong><span>杜克锐</span></strong><span>. 要素市场扭曲对能源效率的影响. 经济研究,2013,09:125-136.</span></li><li><span>林伯强,</span><strong><span>杜克锐</span></strong><span>. 理解中国能源强度的变化:一个综合的分解框架. 世界经济,2014,04:69-87.</span></li><li><span>林伯强,</span><strong><span>杜克锐</span></strong><span>. 我国能源生产率增长的动力何在：基于距离函数的分解. 金融研究,2013, 09,84-96.</span></li><li><strong><span>杜克锐</span></strong><span>,罗能生. 电视台集团化还是竞争:一个产业组织的视角. 世界经济文汇,2011,06:11-31. （本科毕业论文）</span></li></ol><p>&nbsp;</p><hr /><h3 id='期刊评审'><span>期刊评审</span></h3><p><span>Applied Economics, Annals of Tourism Research, Energy Journal, Energy Economics, China Economic Review, World Development, Computational Economics, Economic Modelling, Energy Policy, Technological Forecasting &amp; Social Change, Applied Energy, Energy, Renewable and Sustainable Energy Reviews, Transportation Research Part A: Policy and Practice，Business, Strategy and the Environment </span></p><p>&nbsp;</p><p>&nbsp;</p><p><span>updated: 2021-11-24</span></p></div></div>
 </body>
 </html>
